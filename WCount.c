@@ -4,7 +4,8 @@
 int main(int argc, char *argv[]){
   FILE *fin;
   fin = fopen(argv[2], "r");
-  int capitalword_number = 0, bytes_number = 0, lines_number = 1, words_number = 1; 
+  int capitalword_number = 0, bytes_number = 0;
+  int lines_number = 1, words_number = 1;
   char symbol, previous_symbol = ' ';
 
   while ((symbol = getc(fin)) != EOF)  {
