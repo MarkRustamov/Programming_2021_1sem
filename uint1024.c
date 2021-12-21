@@ -9,7 +9,7 @@ typedef struct {
     int length;
 } uint1024_t;
 
-uint1024_t init() {
+uint1024_t initialization() {
     uint1024_t num;
     num.length = 0;
     num.numbers = NULL;
@@ -152,17 +152,16 @@ uint1024_t mult_op(uint1024_t x, uint1024_t y) {
 }
 
 int main() {
-    uint1024_t x = init();
-    uint1024_t y = init();
-    printf("First number: ");
+    uint1024_t x = initialization(), y = initialization();
+    printf("Number: ");
     scanf_value(&x);
-    printf("Second number: ");
+    printf("Number: ");
     scanf_value(&y);
-    uint1024_t add = add_op(x, y);
+    uint1024_t sum = add_op(x, y);
     uint1024_t sub = subtr_op(x, y);
     uint1024_t mult = mult_op(x, y);
     printf("addition\n");
-    printf_value(add);
+    printf_value(sum);
     printf("subtraction\n");
     printf_value(sub);
     printf("multiplication\n");
